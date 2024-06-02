@@ -1,9 +1,12 @@
-import Image from 'next/image';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import InfoBoxes from '@/components/InfoBoxes';
 
 export default function Home() {
 	return (
-		<main>
-			<h1>Home Page</h1>
-		</main>
+		<>
+			<Hero />
+			<InfoBoxes />
+		</>
 	);
 }
