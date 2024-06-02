@@ -1,4 +1,5 @@
 import '@/assets/style/globals.css';
+import Navbar from '@/components/NavBar';
 
 export const metadata = {
 	title: 'RentGh |Rent A House ',
@@ -8,7 +9,10 @@ export const metadata = {
 export default function Main({ children }) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }
