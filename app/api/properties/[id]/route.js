@@ -9,7 +9,7 @@ export const GET = async (request, { params }) => {
 	try {
 		await connectDB();
 		const property = await Property.findById(id);
-		return new Response(JSON.stringify({ property }), {
+		return new Response(JSON.stringify(property), {
 			status: 200,
 		});
 	} catch (error) {

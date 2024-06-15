@@ -13,8 +13,8 @@ const PropertyDetails = ({ property }) => {
 	return (
 		<main>
 			<div className='bg-white p-6 rounded-lg shadow-md text-center md:text-left'>
-				<div className='text-gray-500 mb-4'>{property.type}</div>
-				<h1 className='text-3xl font-bold mb-4'>{property.name}</h1>
+				<div className='text-gray-500 mb-4'>{property?.type}</div>
+				<h1 className='text-3xl font-bold mb-4'>{property?.name}</h1>
 				<div className='text-gray-500 mb-4 flex align-middle justify-center md:justify-start'>
 					<FaMapMarked className='text-lg text-orange-700 mr-2' />
 					<p className='text-orange-700'>
@@ -93,7 +93,7 @@ const PropertyDetails = ({ property }) => {
 				<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none space-y-2'>
 					{property?.amenities?.map((amenity, index) => (
 						<li key={index}>
-							<FaCheck className='inline-block text-green-600 mr-2 mt-3' />{' '}
+							<FaCheck className='inline-block text-green-600 mr-2 ' />{' '}
 							{amenity}
 						</li>
 					))}
