@@ -1,4 +1,5 @@
 import '@/assets/style/globals.css';
+import AuthProvider from '@/components/AuthProvider';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/NavBar';
 
@@ -9,12 +10,14 @@ export const metadata = {
 
 export default function Main({ children }) {
 	return (
-		<html lang='en'>
-			<body>
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
-		</html>
+		<AuthProvider>
+			<html lang='en'>
+				<body>
+					<Navbar />
+					{children}
+					<Footer />
+				</body>
+			</html>
+		</AuthProvider>
 	);
 }
