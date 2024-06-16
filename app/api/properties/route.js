@@ -15,3 +15,13 @@ export const GET = async (request) => {
 		});
 	}
 };
+
+export const POST = async () => {
+	try {
+		return new Response(JSON.stringify({ message: 'Sucess' }), {
+			status: 2000,
+		});
+	} catch (error) {
+		return new Response('Failed to add property');
+	}
+};
